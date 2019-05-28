@@ -25,7 +25,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   dio: ^2.1.5
   #provider: ^2.0.1+1
-  scoped_model: ^1.0.1
+  # scoped_model: ^1.0.1
+  provide: ^1.0.2
   flutter_swiper: ^1.1.6
   flutter_screenutil: ^0.5.2
 

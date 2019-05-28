@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_music/provide/banner.dart';
 const ALPHA_SCROLL_OFFSET = 100;
 
 class TopBanner extends StatefulWidget {
@@ -21,6 +23,9 @@ class _TopBannerState extends State<TopBanner> {
     'http://p1.music.126.net/_2Lr_C_5kGNrQMv89mBRpA==/109951164098388725.jpg'
   ];
 
+  //final _imageItem = [];
+  
+
   double appBarAlpha = 0;
 
   _onScroll(offset) {
@@ -39,6 +44,8 @@ class _TopBannerState extends State<TopBanner> {
 
   @override
   Widget build(BuildContext context) {
+    var bannerInfo = Provide.value<BannerProvide>(context).getBannerInfo();
+    print(bannerInfo);
     return Scaffold(
       body: Stack(
         children: <Widget>[
