@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_music/pages/home/home_pag.dart';
 import 'package:flutter_music/pages/me/me_page.dart';
 import 'package:flutter_music/pages/video/video_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class IndexPage extends StatefulWidget {
@@ -21,6 +22,8 @@ class _IndexPageState extends State<IndexPage> {
 
   @override
   Widget build(BuildContext context) {
+    // 初始化screenUtil
+    ScreenUtil.instance = ScreenUtil(width: 750, height: 1134)..init(context);
     return Scaffold(
       body: PageView(
         controller: _controller,
